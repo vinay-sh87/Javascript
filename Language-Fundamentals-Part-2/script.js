@@ -66,3 +66,47 @@ const combination = (n, r) => {
     return factorial(n) / (factorial(r) * factorial(n - r));
 }
 console.log(combination(9, 3));
+
+//* Arrays
+
+const friends = ['Ben', 'Chrish', 'Peter'];
+console.log(friends);
+console.log(friends.length);
+console.log(friends[0]); // first element
+
+const years = new Array(2001, 2002, 2003, 2004); // using new operator
+console.log(years);
+years.push(2005); // only primitives are not mutable using const
+console.log(years);
+years.pop();
+console.log(years);
+console.log(years[years.length - 1]); // last element
+
+years.forEach(year => {
+    console.log(year);
+})
+const array = [12, 23, 'Stokes', [34, 'Butter'], { age: 34 }, () => { console.log('function from an array') }];
+console.log(array);
+console.log(array[array.length - 2]);
+console.log(array[3][1]);
+
+console.log(calcAge1(years)); // NaN (cause (array - number) isn't fair
+const ages = [];
+years.forEach(elem => {
+    ages.push(calcAge1(elem));
+})
+console.log(ages);
+
+// Operations on arrays
+const numbers = [34, 38, 56];
+numbers.push(9); // add element at the end of the array
+numbers.unshift(1); // add in the beginning
+numbers.shift(); // remove the first element
+numbers.pop(); // remove the last element
+console.log(numbers);
+console.log(numbers.indexOf(56)); // index of the element
+console.log(numbers.includes(56)); // true or false
+
+if (friends.includes('Ben')) {
+    console.log('You got a friend named Ben');
+}
