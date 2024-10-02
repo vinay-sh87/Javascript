@@ -110,3 +110,50 @@ console.log(numbers.includes(56)); // true or false
 if (friends.includes('Ben')) {
     console.log('You got a friend named Ben');
 }
+
+//* Objects
+const person = {
+    name: 'Ashok',
+    'last name': 'Sharma',
+    age: 23,
+    salary: 450000,
+    city: 'Delhi',
+    friends: ['Ramesh', 'Suresh', 'Abhishek'],
+    hasDriversLicense: true,
+}
+console.log(person);
+console.log(person.city); // using dot operator
+console.log(person['salary']); // using bracket notation
+console.log(person['last name']);
+person.name = 'Mahesh'; // changing properties
+console.log(person.name);
+// adding new properties
+person.country = 'India';
+console.log(person.country);
+
+console.log(person.friends['0']);
+console.log(person.friends.length);
+
+const interest = prompt('What do you wanna know about the person (name,age,job,salary,city,country)');
+if (person[interest]) {
+    console.log(person[interest]); // interest is already a string
+} else {
+    console.log(`You're trying to access information that doesn't exists`);
+}
+
+// Object Methods
+const obj = {
+    value: 45,
+    sum: (a, b) => {
+        return a + b;
+    },
+    multiply: function (a, b) {
+        return a * b;
+    },
+    printValue: (value) => {
+        console.log(`The value you given is ${value} and the value that obj holds is ${this.value}`);
+    }
+};
+console.log(obj.sum(34, 34));
+console.log(obj.multiply(34, 3));
+obj.printValue(56);
