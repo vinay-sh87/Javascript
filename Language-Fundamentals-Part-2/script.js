@@ -157,3 +157,28 @@ const obj = {
 console.log(obj.sum(34, 34));
 console.log(obj.multiply(34, 3));
 obj.printValue(56);
+
+//* Loops - to perform iterative tasks
+
+// for loop
+for (let i = 0; i < 5; i++) {
+    console.log(`Welcome ${i}`);
+}
+
+const fruits = ['🍇', '🍇', '🍈', '🍉', '🍊', '🍋', '🍋‍🟩', '🍌', '🍍', '🥭', '🍎', '🍏', '🍐'];
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}
+
+const types = [];
+for (let i = 0; i < array.length; i++) {
+    types.push(typeof array[i]);
+}
+console.log(types);
+
+// while loop
+let i=0;
+while(i<array.length){
+    console.log(array[i]);
+    i++;
+}
